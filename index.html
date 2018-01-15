@@ -10,14 +10,21 @@
     <link rel="manifest" href="manifest.json">
   </head>
   <body>
-    <textarea>
+    <button id="tale_parse">Parse</button>
+    <button id="tale_download">Download</button>
+    <button id="tale_reset">Reset</button>
+    <textarea id="tale_input">
       here --- there, everywhere
       there --- everywhere
       everywhere --- crossroads
       crossroads --- somewhere, nowhere
     </textarea>
+    <textarea id="tale_output"></textarea>
+    <input placeholder="title" id="tale_title">
+    <div id="graph"></div>
     <script src="script/d3-min.js"></script>
     <script src="script/d3-force.js"></script>
+    <script src="script/directed-markdown.js"></script>
     <script src="script/core.js"></script>
   </body>
 </html>

@@ -16,6 +16,10 @@ pre {
   line-height: 6px;
 }
 
+textarea {
+  width: 100%;
+}
+
 /*
 @dead-channel: #231f20;
 @sea: #37b0bb;
