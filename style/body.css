@@ -1,0 +1,29 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 8px;
+  line-height: 6px;
+}
+
+/*
+@dead-channel: #231f20;
+@sea: #37b0bb;
+@mister: #f25633;
+@twilight: #2b7acf;
+@dead-violet: #282634;
+@mid-violet: #4a475d;
+@high-violet: #676097;
+higher still #bab2f0
+@sodium-vapor: #e57d00;
+*/
