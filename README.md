@@ -1,2 +1,3 @@
-# graphtales
-graph tales
+# graph tales
+
+https://viablue.github.io/graphtales/
