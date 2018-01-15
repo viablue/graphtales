@@ -98,15 +98,15 @@ dmParse = function( source ) {
     spaces = /\s/g;
 
     for (var i = 0; i < lines.length; i ++) {
-      var current = lines[i].replace(spaces,""),
-        divider = current.indexOf("---");
+      let current = lines[i].replace( spaces, "" )
+      let divider = current.indexOf("---");
 
       if (divider === -1 || divider > 0 && current.length < 5 ) continue;
       // @todo this isn't exactly accurate
 
-      var node = current.slice(0, divider),
-        connections = current.slice(divider+3, current.length);
-        
+      let node = current.slice( 0, divider )
+      let connections = current.slice( divider + 3, current.length );
+
       if (connections.length < 1 || node.length < 1 ) continue;
 
       var connection = connections.split(commas);

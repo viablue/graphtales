@@ -1,30 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>GRAPH TALES</title>
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/body.css">
-    <link rel="stylesheet" href="style/graphs.css">
-    <link rel="manifest" href="manifest.json">
-  </head>
-  <body>
-    <button id="tale_parse">Parse</button>
-    <button id="tale_download">Download</button>
-    <button id="tale_reset">Reset</button>
-    <textarea id="tale_input">
-      here --- there, everywhere
-      there --- everywhere
-      everywhere --- crossroads
-      crossroads --- somewhere, nowhere
-    </textarea>
-    <textarea id="tale_output"></textarea>
-    <input placeholder="title" id="tale_title">
-    <div id="graph"></div>
-    <script src="script/d3-min.js"></script>
-    <script src="script/d3-force.js"></script>
-    <script src="script/directed-markdown.js"></script>
-    <script src="script/core.js"></script>
-  </body>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>GRAPH TALES</title>
+
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/body.css">
+<link rel="stylesheet" href="style/graphs.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+
+<p>
+
+<input placeholder="title" id="tale_title">
+
+</p>
+
+
+<p>
+
+<textarea id="tale_input">
+here --- there, everywhere
+there --- everywhere
+everywhere --- crossroads
+crossroads --- somewhere, nowhere
+</textarea>
+
+<textarea id="tale_output">
+<!-- empty until parsed -->
+</textarea>
+
+</p>
+
+
+<p>
+
+<button id="tale_parse">Parse</button>
+
+<button id="tale_download">Download</button>
+
+</p>
+
+<!--
+<p>
+
+<button id="tale_play">Play</button>
+
+<button id="tale_back">Back</button>
+
+</p>
+
+
+<p>
+
+<button id="tale_reset">Reset</button>
+
+</p>
+-->
+
+<div id="graph"></div>
+<div id="stack"></div>
+
+<script src="script/d3.min.js"></script>
+<script src="script/d3.force.js"></script>
+<script src="script/directed-markdown.js"></script>
+<script src="script/core.js"></script>
+
+</body>
+
 </html>

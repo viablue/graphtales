@@ -78,7 +78,6 @@ select[multiple] {
 }
 textarea {
   overflow: auto;
-  resize: none;
   vertical-align: top;
 }
 input[type=checkbox],

@@ -15,33 +15,31 @@ const taleOutput = document.getElementById('tale_output')
 const taleDownload = document.getElementById('tale_download')
 const taleTitle = document.getElementById('tale_title')
 
-taleParse.addEventListener('click', doParse, false)
-taleDownload.addEventListener('click', doSave, false)
+taleParse.addEventListener( 'click', doParse, false )
+taleDownload.addEventListener( 'click', doSave, false )
 
 
 function doParse () {
-  let parse = dmParse(taleInput.value),
-    output = JSON.stringify(parse, null, 4);
+  let parse = dmParse( taleInput.value );
+  let output = JSON.stringify( parse, null, 2 );
+
 
   taleOutput.value = output;
-  drawGraph(parse);
+  drawGraph( parse );
 
   // console.log(parse)
 }
 
-
-
-function saveText (filename, data) {
-	let blob = new Blob([data], {type: 'text/plain'});
-	let elem = window.document.createElement('a');
-	elem.href = window.URL.createObjectURL(blob);
+function saveText( filename, data ) {
+	let blob = new Blob( [data], {type: 'text/plain'} );
+	let elem = window.document.createElement( 'a' );
+	elem.href = window.URL.createObjectURL( blob );
 	elem.download = filename;
-	document.body.appendChild(elem);
+	document.body.appendChild( elem );
 	elem.click();
-	document.body.removeChild(elem);
-	window.URL.revokeObjectURL(blob);
+	document.body.removeChild( elem );
+	window.URL.revokeObjectURL( blob );
 }
-
 
 function doSave() { 
   let now = new Date().getTime();
@@ -49,5 +47,5 @@ function doSave() {
 	let title = taleTitle.value || fallback;
 	let text = taleOutput.value;
 
-	saveText(title+".txt", text)
+	saveText( title+".txt", text )
 }
